@@ -1,0 +1,26 @@
+/* .shop{
+    display: flex;
+    flex-direction: column;
+
+} */
+.shop__title{
+    background-color: #cce6eeda;
+    padding: 5px 40px;
+    height: 35px;
+}
+.shop__title > h3{
+    font-size: 16px;
+    color: #232F3E;
+}
+/* .shop__container{
+    background-color: white;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    margin-top: 15px;
+} */
+.shop__container{
+    width: 100%;
+    padding: 30px 60px;
+}
