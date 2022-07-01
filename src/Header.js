@@ -3,11 +3,15 @@ import "./Header.css";
 import FmdGood from '@mui/icons-material/FmdGood';
 import { AddShoppingCartOutlined, Search } from "@material-ui/icons";
 import { MenuOutlined } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDataLayerValue } from './DataLayer';
+import truncate from "./truncate";
+import { signOut } from "@firebase/auth";
+import { auth } from "./firebase";
 
-const Header = ({ param }) => {
+const Header = ({ param, user }) => {
     const [{ basket } ] = useDataLayerValue();
+    const navigate = useNavigate();
   return (
     
     <div className="header__main">
@@ -35,9 +39,9 @@ const Header = ({ param }) => {
                 </div>
             </div>
             <div className="header__right">
-                <div className="info__text">
-                    <p>Hello, Wisdom</p>
-                    <h3><strong>Sign in </strong></h3>
+                <div onClick={()=>{signOut(auth) && navigate('/signin')}} className="info__text">
+                    <p>Hello, {user ? truncate(user?.email, 6) : "Guest"}</p>
+                    <Link to={!user ? '/signin' : '#'} > <h3 style={{textDecoration: "none", color: "white", fontSize: "18px"}}><strong>{user ? "Sign Out" : "Sign In"} </strong></h3> </Link>
                 </div>
                 <div className="info__text">
                     <p>Returns</p>

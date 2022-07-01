@@ -96,6 +96,9 @@ align-items: center;
     margin-top: 0px;
     color: white;
 }
+.info__text > h3:hover{
+    text-decoration: none !important;
+}
 .cart__info{
     display: flex;
     align-items: center;

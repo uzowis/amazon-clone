@@ -1,0 +1,76 @@
+.sign__in{
+    /* width: 30%; */
+    width: 400px;
+    margin: 10px auto;
+    overflow-x: hidden;
+    padding: 15px;
+}
+.sign__in__logo{
+    width: 100%;
+    display: grid;
+}
+.sign__in__logo > img{
+    object-fit: contain;
+    width: 120px;
+    margin: 0px auto;
+}
+.sign__in__container{
+    margin-top: 15px;
+    width: 100%;
+    padding: 30px;
+    border:  1px solid rgba(128, 128, 128, 0.527);
+    border-radius: 5px;
+}
+.sign__in__container > p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+   
+}
+.sign__in__container > h3 {
+    margin-bottom: 20px;
+   
+}
+.sign__in__container > input{
+    border: solid 1px rgba(128, 128, 128, 0.596);
+    margin-bottom: 5px;
+}
+.sign__in__container > input, button{
+    width : 100%
+}
+.sign__in__button{
+    border: 1px rgba(128, 128, 128, 0.548) solid;
+    background-color: rgb(240,194,80);
+    border-radius: 5px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+.sign__in__button:hover{
+    background-color: rgba(241, 191, 66, 0.747);
+}
+.divider{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* justify-content: space-around; */
+}
+.divider__title{
+    text-align: center;
+    width: 100%;
+}
+.divider__line{
+    color: rgba(128, 128, 128, 0.589);
+}
+.register__button{
+    background-color: #DFE2E8;
+    border-radius: 3px;
+    border: 1px solid rgba(128, 128, 128, 0.521);
+    padding: 5px;
+    cursor: pointer;
+}
+.register__button:hover{
+    background-color: #dfe2e8c0;
+}
+.register__button:active{
+    border: none;
+}

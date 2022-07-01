@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import truncate from './truncate'
 import "./Checkout.css"
 import Subtotal from './Subtotal';
 import { useDataLayerValue } from './DataLayer';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import CurrencyFormat from 'react-currency-format'
 
 const Checkout = () => {
-    const [{ basket, qty }, dispatch ] = useDataLayerValue();
+    const [{ basket, qty, user }, dispatch ] = useDataLayerValue();
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        if(!user){
+            navigate('/signin');
+        }
+    })
 
     const removeFromCart =(id) =>{
         dispatch({
@@ -29,7 +36,7 @@ const Checkout = () => {
     }
   return (
     <div className="checkout">
-        <Header />
+        <Header user={user}/>
         <div className="checkout__container">
             <div className="cart__container">
                 <h3>Shopping Cart</h3>

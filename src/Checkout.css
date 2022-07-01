@@ -69,6 +69,7 @@
 }
 .cart__product >img{
     width: 200px;
+    height: 120px;
     object-fit: contain;
 }
 .product__info{

@@ -8,7 +8,7 @@ import { useDataLayerValue } from './DataLayer';
 
 const AllProducts = () => {
     const { category } = useParams();
-    const [{ inCart }] = useDataLayerValue();
+    const [{ inCart, user }] = useDataLayerValue();
     const products =[
         { title : "Lenovo Flex 5 Laptop, 14.0\" FHD Touch Display, AMD Ryzen 5 5500U, 16GB RAM, 256GB Storage, AMD Radeon Graphics,", rating : 5, price: 588.80, oldPrice: 849.99, src : "../products/prod1.jpg"},
         { title : "2022 Acer 15.6\" FHD IPS Touchscreen Chromebook, Intel Dual-Core Celeron N Processor Up to 2.50GHz, 4G", rating : 2, price: 558.80, oldPrice: 849.99, src : "../products/prod2.jpg"},
@@ -27,7 +27,7 @@ const AllProducts = () => {
     ]
   return (
     <div className="all__products">
-        <Header param />
+        <Header param  user={user}/>
         <div className="shop">
             <div className="shop__title">
                 <h3>{category}</h3><span>{inCart}</span>

@@ -1,7 +1,7 @@
 export const initialState = {
      basket : [],
      inCart : '',
-    //  qty : 1
+     user : null
 }
 
 // Calculates the sum total of items in basket
@@ -39,6 +39,11 @@ export const reducer = (state, action) =>{
             return {
                 ...state,
                 basket : [...state.basket]
+            }
+        case 'SET_USER':
+            return {
+                ...state,
+                user : action.user
             }
         default :
             return state

@@ -45,4 +45,13 @@
 }
 .shop__product > button{
     cursor: pointer;
+    width: 100px;
+    border: solid 1px rgba(128, 128, 128, 0.664);
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #F0C250;
+    
+}
+.shop__product > button:hover{
+    background-color: #f5b512;
 }
