@@ -4,6 +4,7 @@ import { auth } from './firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@firebase/auth';
 import { useNavigate } from 'react-router';
 import { useDataLayerValue } from './DataLayer';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
     const [{basket}] = useDataLayerValue();
@@ -44,9 +45,11 @@ const SignIn = () => {
     }
   return (
     <div className="sign__in">
+        <Link to={'/'}>
         <div className="sign__in__logo">
         <img src="./amazon_login_logo.png" alt="" />
         </div>
+        </Link>
         
         <div className="sign__in__container">
             <h3>Sign-In</h3>

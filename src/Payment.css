@@ -1,0 +1,51 @@
+.payment{
+    background-color: #EAEDED;
+    width: 100%;
+
+}
+.payment >h3{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 5px;
+}
+.payment__container{
+    background-color: white;
+    padding: 50px;
+    margin: 0 60px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+.delivery{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border-top: 1px solid gray;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+.delivery >h3, .payment__method >h3{
+    font-size: 25px;
+}
+.payment__method{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid rgba(241, 175, 32, 0.527);
+    padding: 10px ;
+    margin: 5px auto;
+    width: 50%;
+    min-width: 500px;
+}
+.payment__button {
+   margin: 0 auto;
+}
+.payment__button > button{
+    padding: 5px 30px;
+    background-color: #FFD814;
+    border: solid 1px gray;
+}
+.payment__button > button:hover{
+    background-color: #d8b506;
+}

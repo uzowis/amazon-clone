@@ -13,9 +13,14 @@
 }
 .cat__container > a{
     font-size: 12px;
-    text-decoration: none;
+    color: rgba(0, 0, 255, 0.658) !important;
+    cursor: pointer;
     padding-left: 14px;
 
+}
+.cat__container > a:hover{
+    text-decoration: underline !important;
+    color: #bb9d08 !important;
 }
 .cat__container >h3{
     font-size: 18px;

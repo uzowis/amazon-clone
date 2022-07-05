@@ -1,0 +1,18 @@
+.container__details{
+    margin: 100px 0;
+    padding: 30px;
+    text-align: center;
+
+}
+.success__icon{
+    color: green;
+}
+.container__details > button{
+    width: 120px;
+    padding: 5px;
+    background-color: #FFD814;
+}
+.container__details >button:hover{
+    background-color: #d6b407;
+    cursor: pointer;
+}

@@ -9,12 +9,12 @@ import truncate from "./truncate";
 import { signOut } from "@firebase/auth";
 import { auth } from "./firebase";
 
-const Header = ({ param, user }) => {
+const Header = ({ param, user, sticky }) => {
     const [{ basket } ] = useDataLayerValue();
     const navigate = useNavigate();
   return (
     
-    <div className="header__main">
+    <div className={sticky ? 'sticky' : 'header__main' }>
         <div className="header">  
             <div className="header__left">
                 <div className="logo">

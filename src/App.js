@@ -11,10 +11,12 @@ import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
 import SignIn from './SignIn';
+import Payment from './Payment';
+import Success from './Success';
 
 
 function App() {
-  const [{ user}, dispatch] = useDataLayerValue();
+  const [{ user, basket, reference}, dispatch] = useDataLayerValue();
  
   useEffect(() =>{
     onAuthStateChanged(auth, (user)=>{
@@ -33,7 +35,7 @@ function App() {
     
   
   }, [user]);
-  
+
   return (
     <Router>
       <div className="app">
@@ -65,9 +67,33 @@ function App() {
               <>
                 <Checkout />
               </>
+            }/> 
+            
+            {/* Payment Route */}
+            <Route path="/payment" caseSensitive="false" element=
+            {
+              (basket.length > 0)
+              ?
+              <Payment />
+              :
+              <AllProducts />
+            
             }/>
             
-            {/* Product CheckOut Route */}
+            {/* Payment Success Route */}
+            <Route path="/success" caseSensitive="false" element=
+            {
+              (reference === '')
+              ?
+              <AllProducts />
+              :
+              <Success />
+              
+            
+            
+            }/>
+            
+            {/* Authentication Route */}
             <Route path="/signin" caseSensitive="false" element=
             {
               <>

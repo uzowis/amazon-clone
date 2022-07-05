@@ -7,6 +7,9 @@
     background-color: #cce6eeda;
     padding: 5px 40px;
     height: 35px;
+    position: fixed;
+    top: 103px;
+    width: 100%;
 }
 .shop__title > h3{
     font-size: 16px;
@@ -22,5 +25,5 @@
 } */
 .shop__container{
     width: 100%;
-    padding: 30px 60px;
+    padding: 180px 60px 50px 60px;
 }

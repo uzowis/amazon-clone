@@ -27,7 +27,7 @@ const AllProducts = () => {
     ]
   return (
     <div className="all__products">
-        <Header param  user={user}/>
+        <Header param  user={user} sticky/>
         <div className="shop">
             <div className="shop__title">
                 <h3>{category}</h3><span>{inCart}</span>
